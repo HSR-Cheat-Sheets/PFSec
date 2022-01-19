@@ -43,19 +43,58 @@ Die Platform Security ermöglicht die Sicherung einer gesamten Plattform durch e
 \end{center}
 
 \begin{itemize}
-    \item \textbf{Economy of mechanism}: KISS
-    \item \textbf{Fail-safe defaults}: Access Decision sollte bei Fehler in Safe\-State fallen $\rightarrow$ Was ist erlaubt \& nicht was ist verboten (positiver Ansatz)
-    \item \textbf{Complete mediation}: Jeder Access sollte überprüft sein (keine Blindgänger im System)
-    \item \textbf{Open design}: Design bietet keine Angriffsfläche auch wenn man es kennt (da es z.B. open-source ist)
-    \item \textbf{Separation of privilege}: starke Authentifizierung (2FA) bringt nichts, wenn der Admin trotzdemnoch mit username + PW aufs System kommt
-    \item \textbf{Least privilege}: nicht alles als root
-    \item \textbf{Least common mechanism}: gleicher Mechanismus wird für unterschiedliche Zwecke eingesetzt -> Gefahr für weakest Link
-    \item \textbf{Psychological acceptability}: Was kauft der User ab, das er wirklich machen muss dass ein System sicherer wird (Tempobeschränkung auf Strasse mit Blitzer funktioniert nur beschränkt -> besser mit Überzeugung arbeiten, wieso Temporeduzierung nötig ist)
-    \item \textbf{Isolation}: System soll nicht direkt unter Beschus stehen -> mehrere isolierte Layer mit FW etc. haben
-    \item \textbf{Encapsulation}: \TODO
-    \item \textbf{Modularity}: \TODO
-    \item \textbf{Layering}: \TODO
-    \item \textbf{Least astonishment}: \TODO{}
+    \item \textbf{Economy of mechanism}:
+    \begin{itemize}
+        \item KISS
+    \end{itemize}
+    \item \textbf{Fail-safe defaults}: 
+    \begin{itemize}
+        \item Access Decision sollte bei Fehler in Safe\-State fallen $\rightarrow$ Was ist erlaubt \& nicht was ist verboten (positiver Ansatz)
+    \end{itemize}
+    \item \textbf{Complete mediation}: 
+    \begin{itemize}
+        \item Jeder Access sollte überprüft sein (keine Blindgänger im System)
+    \end{itemize}
+    \item \textbf{Open design}: 
+    \begin{itemize}
+        \item Design bietet keine Angriffsfläche auch wenn man es kennt (da es z.B. open-source ist)
+    \end{itemize}
+    \item \textbf{Separation of privilege}:
+    \begin{itemize}
+        \item starke Authentifizierung (2FA) bringt nichts, wenn der Admin trotzdemnoch mit username + PW aufs System kommt
+    \end{itemize}
+    \item \textbf{Least privilege}: 
+    \begin{itemize}
+        \item nicht alles als root
+    \end{itemize}
+    \item \textbf{Least common mechanism}: 
+    \begin{itemize}
+        \item gleicher Mechanismus wird für unterschiedliche Zwecke eingesetzt $\rightarrow$ Gefahr für weakest Link
+    \end{itemize}
+    \item \textbf{Psychological acceptability}: 
+    \begin{itemize}
+        \item Was kauft der User ab, das er wirklich machen muss dass ein System sicherer wird (Tempobeschränkung auf Strasse mit Blitzer funktioniert nur beschränkt $\rightarrow$ besser mit Überzeugung arbeiten, wieso Temporeduzierung nötig ist)
+    \end{itemize}
+    \item \textbf{Isolation}: 
+    \begin{itemize}
+        \item System soll nicht direkt unter Beschus stehen $\rightarrow$ mehrere isolierte Layer mit FW etc. haben
+    \end{itemize}
+    \item \textbf{Encapsulation}: 
+    \begin{itemize}
+        \item eigene Domain
+    \end{itemize}
+    \item \textbf{Modularity}: 
+    \begin{itemize}
+        \item Module separieren/ trennen
+    \end{itemize}
+    \item \textbf{Layering}: 
+    \begin{itemize}
+        \item defense in depth
+    \end{itemize}
+    \item \textbf{Least astonishment}: 
+    \begin{itemize}
+        \item ein Programm/eine Benutzeroberfläche sollte so reagieren, dass der Benutzer möglichst wenig überrascht wird.
+    \end{itemize}
 \end{itemize}
 
 \subsubsection{Architecting a Secure Digital World}
