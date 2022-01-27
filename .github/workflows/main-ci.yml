@@ -17,13 +17,13 @@ jobs:
             root_file: main.tex  
 
         - name: Rename output
-          run: mv main.pdf CyDef_Hacking-Lab_Summary.pdf
+          run: mv main.pdf PFSec_Summary.pdf
 
         - name: Upload pdf
           uses: actions/upload-artifact@v2
           with:
-            name: CyDef_Hacking-Lab_Summary
-            path: CyDef_Hacking-Lab_Summary.pdf
+            name: PFSec_Summary
+            path: PFSec_Summary.pdf
             retention-days: 14
 
         - name: Create new Release
@@ -44,6 +44,6 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
             upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-            asset_path: ./CyDef_Hacking-Lab_Summary.pdf
-            asset_name: CyDef_Hacking-Lab_Summary.pdf
+            asset_path: ./PFSec_Summary.pdf
+            asset_name: PFSec_Summary.pdf
             asset_content_type: application/zip
