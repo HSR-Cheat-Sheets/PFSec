@@ -1,6 +1,6 @@
 %! Licence = CC BY-NC-SA 4.0
 
-%! Author = gianfluetsch, mariuszindel
+%! Author = gianfluetsch
 %! Date = 19. Jan 2022
 %! Project = pfsec_summary
 
@@ -93,7 +93,7 @@ The management of the relationship between subjects and objects is known as \tex
 \end{itemize}
 
 \begin{center}
-    \includegraphics[width=.5\linewidth]{03-access_control/access_control}
+    \includegraphics[width=.5\linewidth]{04-access_control/access_control}
     \vspace{-8pt}
 \end{center}
 
@@ -163,7 +163,7 @@ The management of the relationship between subjects and objects is known as \tex
 \subsection{Security Models}
 
 \subsubsection{Bell-LaPadula (Multi Level Security)}
-\includegraphics[width=.7\linewidth]{03-access_control/bell_lapadula}
+\includegraphics[width=.5\linewidth]{04-access_control/bell_lapadula}
 \begin{itemize}
     \item Allows to create any number of \textit{Categories} or \textit{Compartments}
     \item Arose in the military out of the requirement of \textit{need to know}
@@ -171,7 +171,7 @@ The management of the relationship between subjects and objects is known as \tex
 \end{itemize}
 
 \subsubsection{BIBA (Integrity)}
-\includegraphics[width=.7\linewidth]{03-access_control/biba}
+\includegraphics[width=.5\linewidth]{04-access_control/biba}
 
 \subsubsection{Clark Wilson Model}
 \begin{itemize}
@@ -207,15 +207,15 @@ The management of the relationship between subjects and objects is known as \tex
 \begin{itemize}
     \item \textbf{Mandatory Access Control (MAC)}
     \begin{itemize}
-        \item Controls access based on comparing security labels with security clearances.
+        \item Controls access based on comparing security labels with security clearances.\\
     \end{itemize}
     \item \textbf{Discretionary Access Control (DAC)}
     \begin{itemize}
-        \item Controls access based on the identity of the requestor and on access rules (authorizations) stating what requestors are (or are not) allowed to do.
+        \item Controls access based on the identity of the requestor and on access rules (authorizations) stating what requestors are (or are not) allowed to do.\\
     \end{itemize}
     \item \textbf{Role Based Access Control (RBAC)}
     \begin{itemize}
-        \item Controls access based on the roles that users have within the system and on rules stating what accesses are allowed to users in given roles.
+        \item Controls access based on the roles that users have within the system and on rules stating what accesses are allowed to users in given roles.\\
     \end{itemize}
     \item \textbf{Attribute Based Access Control (ABAC)}
     \begin{itemize}
@@ -238,7 +238,7 @@ The management of the relationship between subjects and objects is known as \tex
 \end{itemize}
 
 \begin{center}
-    \includegraphics[width=1.0\linewidth]{03-access_control/dac}
+    \includegraphics[width=0.9\linewidth]{04-access_control/dac}
     \vspace{-8pt}
 \end{center}
 
@@ -265,7 +265,7 @@ Permissions werden über Rollen verwaltet (Permission wird einer Rolle zugewiese
 Einem User wird nun die entsprechende Rolle (in AD eine ug) zugewiesen und über diese Rolle hat der User dann die entsprechende Berechtigung für eine Ressource, etc.
 
 \begin{center}
-    \includegraphics[width=1.0\linewidth]{03-access_control/rbac}
+    \includegraphics[width=1.0\linewidth]{04-access_control/rbac}
     \vspace{-8pt}
 \end{center}
 
@@ -291,13 +291,15 @@ Einem User wird nun die entsprechende Rolle (in AD eine ug) zugewiesen und über
     \end{itemize}
 \end{itemize}
 
+\newpage
+
 \subsubsection{Attribute-Based Access Control (ABAC)}
 \begin{itemize}
     \item Can define authorizations that express conditions on properties of both the resource and the subject
     \item Strength is its flexibility and expressive power
     \item Main obstacle to its adoption in real systems has been concern abaout the performance impact of evaluating predicates on both resource and user properties for each access
     \item Web services have been pioneering technologies through the introduction of the \textit{eXtensible Access Control Markup Language (XACML)}
-    \item There is considerable interest in applying the model to cloud services\\
+    \item There is considerable interest in applying the model to cloud services
 \end{itemize}
 
 \paragraph{Attributes}
@@ -329,7 +331,7 @@ Einem User wird nun die entsprechende Rolle (in AD eine ug) zugewiesen und über
 
 \paragraph{ABAC Logical Architecture}
 \begin{center}
-    \includegraphics[width=.6\linewidth]{03-access_control/abac}
+    \includegraphics[width=.4\linewidth]{04-access_control/abac}
     \vspace{-8pt}
 \end{center}
 
@@ -367,13 +369,13 @@ Einem User wird nun die entsprechende Rolle (in AD eine ug) zugewiesen und über
 
 \subsubsection{ACL Trust Chain}
 \begin{center}
-    \includegraphics[width=.9\linewidth]{03-access_control/acl_trustchain}
+    \includegraphics[width=.9\linewidth]{04-access_control/acl_trustchain}
     \vspace{-8pt}
 \end{center}
 
 \subsubsection{ABAC Trust Chain}
 \begin{center}
-    \includegraphics[width=1.0\linewidth]{03-access_control/abac_trustchain}
+    \includegraphics[width=1.0\linewidth]{04-access_control/abac_trustchain}
     \vspace{-8pt}
 \end{center}
 
