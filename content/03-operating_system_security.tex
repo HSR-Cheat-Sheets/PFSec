@@ -1,6 +1,6 @@
 %! Licence = CC BY-NC-SA 4.0
 
-%! Author = gianfluetsch, mariuszindel
+%! Author = gianfluetsch
 %! Date = 19. Jan 2022
 %! Project = pfsec_summary
 
@@ -9,18 +9,16 @@
 \subsection{Introduction}
 
 \subsubsection{Layers}
-$User Applications and Utilities \rightarrow Operating System Kernel \rightarrow Physical Hardware$\\
+\textit{User Applications and Utilities $\rightarrow$ Operating System Kernel $\rightarrow$ Physical Hardware}\\
 
 Das Vorhandensein von BIOS und möglicherweise anderem Code, der außerhalb des Betriebssystemkerns liegt und Betriebssystem-Kernel nicht sichtbar ist, aber beim Booten des Systems verwendet wird des Systems oder zur Unterstützung der Low-Level-Hardware-Steuerung verwendet wird, ist in den Schichten.
 Für jede dieser Layer müssen geeignete Hardening-Massnahmen ergriffen werden um angemessene Sicherheitsdienste bereitzustellen. Und jeder Layer ist anfällig für Angriffe von unten angreifbar, wenn die unteren Schichten nicht auch entsprechend gesichert sind.
-
-Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
 
 \subsubsection{Strategies}
 \begin{enumerate}
     \item White-list approved applications
     \begin{itemize}
-        \item Was (welche Applikation) darf auf welchem Layer laufen -> Whitelisting
+        \item Was (welche Applikation) darf auf welchem Layer laufen $\rightarrow$ Whitelisting
     \end{itemize}
     \item Patch third-party applications and operating system vulnerabilities
     \begin{itemize}
@@ -63,7 +61,7 @@ The first step in deploying a new system is planning. Planning should include
 
 \begin{center}
     \vspace{-8pt}
-    \includegraphics[width=1.0\linewidth]{02-operating_system_security/system_security_planning}
+    \includegraphics[width=1.0\linewidth]{03-operating_system_security/system_security_planning}
     \vspace{-8pt}
 \end{center}
 
@@ -132,7 +130,7 @@ Security maintenance includes:
 \subsubsection{Backup as another cornerstone}
 \begin{center}
     \vspace{-8pt}
-    \includegraphics[width=1.0\linewidth]{02-operating_system_security/backup}
+    \includegraphics[width=1.0\linewidth]{03-operating_system_security/backup}
     \vspace{-8pt}
 \end{center}
 
@@ -158,7 +156,7 @@ Security maintenance includes:
 \end{minipage}
 \begin{minipage}{0.45\linewidth}
     \begin{center}
-        \includegraphics[width=0.4\linewidth]{02-operating_system_security/virtualization}
+        \includegraphics[width=0.4\linewidth]{03-operating_system_security/virtualization}
         \vspace{-8pt}
     \end{center}
 \end{minipage}
@@ -184,7 +182,7 @@ Security maintenance includes:
 
 \subsubsection{Virtual Firewall}
 \begin{center}
-    \includegraphics[width=.9\linewidth]{02-operating_system_security/virtual_fw}
+    \includegraphics[width=.9\linewidth]{03-operating_system_security/virtual_fw}
     \vspace{-8pt}
 \end{center}
 
