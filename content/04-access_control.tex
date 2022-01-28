@@ -6,7 +6,7 @@
 
 \section{Access Control}
 
-\subsection{Different typos of access control}
+\subsection{Different types of access control}
 
 \subsubsection{Controlling access to assets}
 An access control is any hardware, software, or administrative policy or procedure that controls access to resources.
@@ -32,11 +32,11 @@ The management of the relationship between subjects and objects is known as \tex
     \item \textbf{Preventive}
     \begin{itemize}
         \item A preventive control attempts to thwart or stop unwanted or unauthorized activity from occurring.
-        \item \textit{Examples}: fences, locks, biometrics, mantraps, lighting, alarm systems, separation of duties, job rotation, data classification, penetration testing, encryption, auditing, security cameras, smartcards, security policies, securityawareness training, antivirus software, firewalls, intrusion prevention systems (IPSs).
+        \item \textit{Examples}: fences, locks, biometrics, mantraps, lighting, alarm systems, separation of duties, job rotation, data classification, penetration testing, encryption, auditing, security cameras, smartcards, security policies, securityawareness training, antivirus software, firewalls, intrusion prevention systems (IPS).
     \end{itemize}
-    \item \textit{Detective}
+    \item \textbf{Detective}
     \begin{itemize}
-        \item  A detective control attempts to discover ordetect unwanted or unauthorized activity.
+        \item  A detective control attempts to discover or detect unwanted or unauthorized activity.
         \item Detective controls operate after the fact and can discover the activity only after it has occurred.
         \item \textit{Examples}: security guards, motion detectors, recording and review of events captured by security cameras, job rotation, mandatory vacations, audit trails, honeypots, intrusion detection systems (IDSs), supervision and reviews of users, incident investigations.
     \end{itemize}
@@ -72,11 +72,11 @@ The management of the relationship between subjects and objects is known as \tex
     \end{itemize}
 \end{itemize}
 
-\subsubsection{Implementation of Access Controls}
+\subsubsection{Implementation of Access Controls}\label{subsubsec:implementation-of-access-controls}
 \begin{itemize}
     \item \textbf{Physical controls}
     \begin{itemize}
-        \item Physikalischer Präventivmassnahme, um z.B. nur einzelnen Personen Zutritt zum RZ gewähren
+        \item Physikalische Präventivmassnahme, um z.B. nur einzelnen Personen Zutritt zum RZ gewähren
         \item items you can physically touch. Physical mechanisms deployed to prevent, monitor, or detect direct contact with systems or areas within a facility.
         \item \textit{Examples}: guards, fences, motion detectors, locked doors, sealed windows, lights, cable protection, laptop locks, badges, swipe cards, guard dogs, video cameras, mantraps, alarms
     \end{itemize}
@@ -105,7 +105,7 @@ The management of the relationship between subjects and objects is known as \tex
     \begin{itemize}
         \item Basic principle of access control is implicit deny
         \item Most authorization mechanisms use it.
-        \item The implicit deny principle ensures that access to an object is denied unless access has been explicitly granted to a subject.
+        \item The implicit deny principle ensures that access to an object (file) is denied unless access has been explicitly granted to a subject (user).
     \end{itemize}
     \item \textbf{Constrained Interface}
     \begin{itemize}
@@ -113,7 +113,7 @@ The management of the relationship between subjects and objects is known as \tex
         \item Users with full privileges have access to all the capabilities of the application.
         \item A common method is to hide the capability if the user does not have permissions to use it.
     \end{itemize}
-    \item \textbf{content-Dependent Control}
+    \item \textbf{Content-Dependent Control}
     \begin{itemize}
         \item Restrict access to data based on the content within an object.
         \item Auf sensible/ persönliche Daten gibt es eine Access Control (oft bei Löhnen etc. so geregelt)
@@ -297,7 +297,7 @@ Einem User wird nun die entsprechende Rolle (in AD eine ug) zugewiesen und über
 \begin{itemize}
     \item Can define authorizations that express conditions on properties of both the resource and the subject
     \item Strength is its flexibility and expressive power
-    \item Main obstacle to its adoption in real systems has been concern abaout the performance impact of evaluating predicates on both resource and user properties for each access
+    \item Main obstacle to its adoption in real systems has been concern about the performance impact of evaluating predicates on both resource and user properties for each access
     \item Web services have been pioneering technologies through the introduction of the \textit{eXtensible Access Control Markup Language (XACML)}
     \item There is considerable interest in applying the model to cloud services
 \end{itemize}
@@ -379,8 +379,8 @@ Einem User wird nun die entsprechende Rolle (in AD eine ug) zugewiesen und über
     \vspace{-8pt}
 \end{center}
 
-$subject \rightarrow Authentication \rightarrow Access Control Decision \rightarrow Access Control Enforcement \rightarrow$ object ist genau gleich wie bei der ACL Trust Chain\\
-$\rightarrow$ Allerdings gibt es zusätzliche Attribute\\
+$subject \rightarrow Authentication \rightarrow Access Control Decision \rightarrow Access Control Enforcement \rightarrow object$\\
+ist genau gleich wie bei der ACL Trust Chain $\rightarrow$ Allerdings gibt es zusätzliche Attribute\\
 
-Ein Vergleich von repräsentativen Vertrauensbeziehungen für die Verwendung von ACL und ABAC zeigt, dass es viel komplexere Vertrauensbeziehungen gibt, die erforderlich sind, damit ABAC richtig funktioniert. Ignoriert man die Gemeinsamkeiten in beiden Teilen, kann man feststellen dass bei ACLs die Root of Trust beim Objectowner liegt, der letztlich die Objektzugriffsregeln durchsetzt, indem er den Zugriff auf das Objekt durch Hinzufügen eines Benutzers zu einer ACL. 
+Ein Vergleich von repräsentativen Vertrauensbeziehungen für die Verwendung von ACL und ABAC zeigt, dass es viel komplexere Vertrauensbeziehungen gibt, die erforderlich sind, damit ABAC richtig funktioniert. Ignoriert man die Gemeinsamkeiten in beiden Teilen, kann man feststellen dass bei ACLs die Root of Trust beim ObjectOwner liegt, der letztlich die Objektzugriffsregeln durchsetzt, indem er den Zugriff auf das Objekt durch Hinzufügen eines Benutzers zu einer ACL regelt.
 

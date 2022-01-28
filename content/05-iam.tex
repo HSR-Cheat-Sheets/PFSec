@@ -22,7 +22,7 @@
 
 \subsubsection{Principle Propagation}
 \begin{minipage}{0.5\linewidth}
-    In a multi-tiered architecture, principal propagation is important. Whenever a principal (user or another application) is authenticated, a \textit{security context} is created. That context may be system or environment or even mechanism dependent. \textit{But that security context should contain reliable trustworthy identity data that corresponds to an authenticated principal}.\\
+    In a multi-tiered architecture, principal propagation is important. Whenever a principal (user or another application) is authenticated, a \textit{security context} is created. That context may be system, environment or even mechanism dependent. \textit{But that security context should contain reliable trustworthy identity data that corresponds to an authenticated principal}.\\
 
     During propagation, \textit{the security context is transferred from one trusted tier to the next trusted one}. Each server application can obtain the authenticated identification of the client principle from the security context. The use of the authenticated identity is necessary for the correct creation of accountability data and the correct application of authorization policies.\\
 \end{minipage}
@@ -40,11 +40,13 @@
     \vspace{-8pt}
 \end{center}
 
-\subsubsection{Access Control}
+\subsubsection{Access Control}\label{subsubsec:access-control}
 \begin{center}
     \includegraphics[width=.7\linewidth]{05-iam/access_control}
     \vspace{-8pt}
 \end{center}
+
+\newpage
 
 \paragraph{Options for Integration with centralized access control}
 \begin{center}

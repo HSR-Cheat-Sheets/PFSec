@@ -11,24 +11,24 @@
 \subsubsection{Layers}
 \textit{User Applications and Utilities $\rightarrow$ Operating System Kernel $\rightarrow$ Physical Hardware}\\
 
-Das Vorhandensein von BIOS und möglicherweise anderem Code, der außerhalb des Betriebssystemkerns liegt und Betriebssystem-Kernel nicht sichtbar ist, aber beim Booten des Systems verwendet wird des Systems oder zur Unterstützung der Low-Level-Hardware-Steuerung verwendet wird, ist in den Schichten.
-Für jede dieser Layer müssen geeignete Hardening-Massnahmen ergriffen werden um angemessene Sicherheitsdienste bereitzustellen. Und jeder Layer ist anfällig für Angriffe von unten angreifbar, wenn die unteren Schichten nicht auch entsprechend gesichert sind.
+Das Vorhandensein von BIOS und möglicherweise anderem Code, der sich außerhalb des Betriebssystem-Kernels befindet und für den Betriebssystemkern größtenteils nicht sichtbar ist, aber beim Booten des Systems oder zur Unterstützung der Low-Level-Hardwarekontrolle verwendet wird, ist in den Schichten nicht dargestellt.
+Jede dieser Codeschichten muss durch geeignete Hardening-Massnahmen geschützt werden, um angemessene Sicherheitsdienste bereitzustellen. Und jede Schicht ist anfällig für Angriffe von unten, wenn die unteren Schichten nicht ebenfalls angemessen gesichert sind.
 
 \subsubsection{Strategies}
 \begin{enumerate}
-    \item White-list approved applications
+    \item \textbf{White-list approved applications}
     \begin{itemize}
         \item Was (welche Applikation) darf auf welchem Layer laufen $\rightarrow$ Whitelisting
     \end{itemize}
-    \item Patch third-party applications and operating system vulnerabilities
+    \item \textbf{Patch third-party applications and operating system vulnerabilities}
     \begin{itemize}
         \item Wann wird welcher Patch eingespielt, anhand möglicher Probleme etc. Strategie erstellen und umsetzen
     \end{itemize}
-    \item Restrict administrative privileges
+    \item \textbf{Restrict administrative privileges}
     \begin{itemize}
         \item Wirklich nur wenn nötig admin-Rechte vergeben oder Zeitbeschränkt admin-Rechte einrichten $\rightarrow$ Principle of Least Privileges
     \end{itemize}
-    \item Create a defense-in-depth system
+    \item \textbf{Create a defense-in-depth system}
 \end{enumerate}
 
 \subsubsection{Build and Deploy Process}
@@ -65,7 +65,7 @@ The first step in deploying a new system is planning. Planning should include
     \vspace{-8pt}
 \end{center}
 
-\subsection{OS Hardening}
+\subsection{OS Hardening}\label{subsec:os-hardening}
 
 \subsubsection{Steps in OS Hardening}
 \begin{enumerate}
@@ -85,7 +85,7 @@ The first step in deploying a new system is planning. Planning should include
     \end{itemize}
 \end{enumerate}
 
-\textcolor{red}{\textbf{Wenn zwischen Schritt 1 \& 2 schon jemand Zugriff auf das System hat und etwas schädliches einspielen könnte, kann man es gerade sein lassen $\rightarrow$ bereits kompromitiertes System.}}
+\textcolor{red}{\textbf{Wenn zwischen Schritt 1 \& 2 schon jemand Zugriff auf das System hat und etwas schädliches einspielen könnte, kann man es gerade sein lassen $\rightarrow$ bereits kompromittiertes System.}}
 
 \subsubsection{Application Configuration}
 \begin{itemize}
@@ -100,7 +100,7 @@ The first step in deploying a new system is planning. Planning should include
 \subsubsection{Encryption Technology}
 \begin{itemize}
     \item Is a key enabling technology that may be used to secure data both in transit and when stored
-    \item Must be configured and appropriate cryptographic keys created, signed, and secured
+    \item Must be configured and appropriate cryptographic keys created, signed and secured
     \item If secure network services are provided using TLS or IPsec suitable public and private keys must be generated for each of them
     \item If secure network services are provided using SSH, appropriate server and client keys must be created
     \item Cryptographic file systems are another use of encryption
@@ -113,7 +113,7 @@ Security maintenance includes:
     \item Performing regular backups
     \item Recovering from security compromises
     \item Regularly testing system security
-    \item Using appropriate software maintenance processes to patch and update all critical software, and to monitor and revise configuration as needed
+    \item Using appropriate software maintenance processes to patch and update all critical software and to monitor and revise configuration as needed
 \end{itemize}
 
 \subsubsection{Logging as cornerstone}
